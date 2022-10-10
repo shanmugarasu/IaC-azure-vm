@@ -67,7 +67,7 @@ resource "azurerm_virtual_machine_extension" "adp" {
   auto_upgrade_minor_version = true
   type_handler_version       = "2.0.0"
 
-  Settings = <<SETTINGS
+  settings = <<SETTINGS
     {
         "fileUris": ["https://raw.githubusercontent.com/shanmugarasu/coin-payment/master/src/scripts/github-runner-install.ps1"],
         "commandToExecute": "powershell -ExecutionPolicy Unrestricted -file github-runner-install.ps1"
